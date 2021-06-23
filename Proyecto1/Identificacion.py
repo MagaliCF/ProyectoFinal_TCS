@@ -5,12 +5,13 @@ def identificar(promediosH, frecFund):
   promediosH = [x * 1000 for x in promediosH]#Se hace ampliación de promedios
   frecFund = frecFund * 1000#Se hace ampliación
   
-  tolerancia1 = 0.95
+  #tolerancia1 = 0.21
+  tolerancia1 = 0.92
   tolerancia2 = 0.13
   AH=promediosH[0]; AHminor=AH*(1-tolerancia1); AHmayor=AH*(1+0.19)
-  EH=promediosH[1]; EHminor=EH*(1-tolerancia1); EHmayor=EH*(1+0.13)
-  IH=promediosH[2]; IHminor=IH*(1-tolerancia1); IHmayor=IH*(1+tolerancia1)
-  OH=promediosH[3]; OHminor=OH*(1-0.93); OHmayor=OH*(1+tolerancia2)
+  EH=promediosH[1]; EHminor=EH*(1-tolerancia1); EHmayor=EH*(1+tolerancia2)
+  IH=promediosH[2]; IHminor=IH*(1-0.16); IHmayor=IH*(1+tolerancia1)
+  OH=promediosH[3]; OHminor=OH*(1-tolerancia2); OHmayor=OH*(1+tolerancia2)
   UH=promediosH[4]; UHminor=UH*(1-tolerancia2); UHmayor=UH*(1+tolerancia2)
   
   print("A:",AH,"(",AHminor,",",AHmayor,")")
